@@ -22,7 +22,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="">
+    <nav className="bg-[#23212C]">
       <div className="container mx-auto flex justify-between items-center bg-[#23212C] py-5 px-6 rounded-b-2xl relative">
         <div className="logo">
           <Link href="/">
