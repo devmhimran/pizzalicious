@@ -12,7 +12,8 @@ const Hero = () => {
           <h1
             className={`text-[86px] leading-tight text-[#090907] ${fonts.dm_serif_text.className}`}
           >
-            Fastest <br /> Delivery & <br /> Easy Pickup
+            Fastest <br /> <span className="text-[#F2552C]">Delivery</span> &{" "}
+            <br /> Easy <span className="text-[#F2552C]">Pickup</span>
           </h1>
           <div className="flex items-center gap-2 my-8">
             <img
@@ -49,7 +50,9 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <p className={`text-2xl mb-4 ${fonts.dm_serif_text.className}`}>
+              <p
+                className={`text-2xl text-[#090907] mb-4 ${fonts.dm_serif_text.className}`}
+              >
                 Fast Delivery
               </p>
               <p className="text-base">
@@ -66,7 +69,9 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <p className={`text-2xl mb-4 ${fonts.dm_serif_text.className}`}>
+              <p
+                className={`text-2xl text-[#090907] mb-4 ${fonts.dm_serif_text.className}`}
+              >
                 Pick up
               </p>
               <p className="text-base">
@@ -82,7 +87,9 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <p className={`text-2xl mb-4 ${fonts.dm_serif_text.className}`}>
+              <p
+                className={`text-2xl text-[#090907] mb-4 ${fonts.dm_serif_text.className}`}
+              >
                 Dine in
               </p>
               <p className="text-base">
