@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={fonts.plus_Jakarta_Sans.className}>
+      <body className={fonts.nunito.className}>
         <Navbar />
         {children}
       </body>
