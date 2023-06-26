@@ -43,22 +43,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex justify-end items-center gap-5 lg">
+      <div className="flex justify-end items-center gap-6 lg">
         <span className="lg:block hidden">
           {navLink.map((data, index) => (
             <Link
-              className="text-base font-bold hover:text-brandBlue"
+              className="text-base font-bold hover:text-brandBlue mx-3"
               key={index}
               href={data.navLink}
             >
               {data.navText}
             </Link>
           ))}
+          |
         </span>
-        {/* |
-        <Link className="text-base font-bold hover:text-brandBlue" href="/">
-          My Orders
-        </Link> */}
+
         <div className="cart bg-[#F3F4FF] p-3 rounded-xl relative">
           <p className="bg-brandBlue text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
             4
@@ -75,11 +73,30 @@ const Navbar = () => {
             src="/assets/pizzalicious-avatar-image.png"
             alt="avatar"
           /> */}
-          <img
-            className="w-10 h-10 rounded-xl "
-            src="/assets/pizzalicious-avatar-image.png"
-            alt=""
-          />
+          <span
+            className="cursor-pointer"
+            onClick={() => setProfileDropDown(!profileDropDown)}
+          >
+            <img
+              className="w-10 h-10 rounded-xl "
+              src="/assets/pizzalicious-avatar-image.png"
+              alt=""
+            />
+          </span>
+          <div
+            className={`absolute w-40 right-20 lg:right-0 bg-brandBlue rounded-xl p-4 ${
+              profileDropDown ? "" : "hidden"
+            }`}
+          >
+            <Link className="block text-white font-bold mb-2" href="/">
+              Dashboard
+            </Link>
+            <Link className="block text-white font-bold my-2" href="/">
+              Profile
+            </Link>
+            <hr className="my-2 " />
+            <div className="block text-white font-bold mt-2">Sign out</div>
+          </div>
         </div>
         <div className="mobile__menu block lg:hidden">
           <div className="flex gap-2 items-center">
