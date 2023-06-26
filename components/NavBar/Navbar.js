@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { LuShoppingBag } from "react-icons/lu";
@@ -10,10 +11,11 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 const Navbar = () => {
   const [profileDropDown, setProfileDropDown] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
+  const router = useRouter();
   const navLink = [
     {
       navText: "Our Hot Deals 🔥",
-      navLink: "/our-pizzas",
+      navLink: "/our-hot-deals",
     },
     {
       navText: "My Orders",
@@ -24,7 +26,10 @@ const Navbar = () => {
     <nav className="container mx-auto py-4 grid grid-cols-2 justify-between lg:px-0 px-4 relative">
       <div className="flex items-center gap-12">
         <div className="logo">
-          <h1 className="text-2xl font-bold uppercase text-brandBlue">
+          <h1
+            className="text-2xl font-bold uppercase text-brandBlue"
+            onClick={() => router.push("/")}
+          >
             pizza <br />
             licious
           </h1>
@@ -88,10 +93,10 @@ const Navbar = () => {
               profileDropDown ? "" : "hidden"
             }`}
           >
-            <Link className="block text-white font-bold mb-2" href="/">
+            <Link className="block text-white font-bold mb-2" href="/dashboard">
               Dashboard
             </Link>
-            <Link className="block text-white font-bold my-2" href="/">
+            <Link className="block text-white font-bold my-2" href="/profile">
               Profile
             </Link>
             <hr className="my-2 " />
