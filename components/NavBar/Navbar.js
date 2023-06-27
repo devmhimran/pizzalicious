@@ -23,124 +23,129 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="container mx-auto py-4 grid grid-cols-2 justify-between lg:px-0 px-4 relative">
-      <div className="flex items-center gap-12">
-        <div className="logo">
-          <h1
-            className="text-2xl font-bold uppercase text-brandBlue"
-            onClick={() => router.push("/")}
-          >
-            pizza <br />
-            licious
-          </h1>
-        </div>
-        <div className="lg:block hidden">
-          <div className="search bg-[#EDEEF2] rounded-xl flex justify-end items-center px-2.5">
-            <input
-              className="bg-[#EDEEF2] w-full py-2 outline-none rounded-xl"
-              placeholder="Search"
-              type="text"
-              name=""
-              id=""
-            />
-            <CiSearch className="text-xl text-[#83859C]" />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-end items-center gap-6 lg">
-        <span className="lg:block hidden">
-          {navLink.map((data, index) => (
-            <Link
-              className="text-base font-bold hover:text-brandBlue mx-3"
-              key={index}
-              href={data.navLink}
+    <nav className="border-b">
+      <div className="container mx-auto py-4 grid grid-cols-2 justify-between lg:px-0 px-4 relative ">
+        <div className="flex items-center gap-12">
+          <div className="logo">
+            <h1
+              className="text-2xl leading-normal font-bold uppercase text-brandBlue"
+              onClick={() => router.push("/")}
             >
-              {data.navText}
-            </Link>
-          ))}
-          |
-        </span>
-
-        <div className="cart bg-[#F3F4FF] p-3 rounded-xl relative">
-          <p className="bg-brandBlue text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
-            4
-          </p>
-          <span>
-            <LuShoppingBag className="text-xl text-brandBlue" />
-          </span>
-        </div>
-        <div className="avatar">
-          {/* <Image
-            className="rounded-xl focus:outline outline-offset-2 outline-1 outline-blue-500"
-            width={40}
-            height={40}
-            src="/assets/pizzalicious-avatar-image.png"
-            alt="avatar"
-          /> */}
-          <span
-            className="cursor-pointer"
-            onClick={() => setProfileDropDown(!profileDropDown)}
-          >
-            <img
-              className="w-10 h-10 rounded-xl "
-              src="/assets/pizzalicious-avatar-image.png"
-              alt=""
-            />
-          </span>
-          <div
-            className={`absolute w-40 right-20 lg:right-0 bg-brandBlue rounded-xl p-4 ${
-              profileDropDown ? "" : "hidden"
-            }`}
-          >
-            <Link className="block text-white font-bold mb-2" href="/dashboard">
-              Dashboard
-            </Link>
-            <Link className="block text-white font-bold my-2" href="/profile">
-              Profile
-            </Link>
-            <hr className="my-2 " />
-            <div className="block text-white font-bold mt-2">Sign out</div>
+              pizza <br />
+              licious
+            </h1>
           </div>
-        </div>
-        <div className="mobile__menu block lg:hidden">
-          <div className="flex gap-2 items-center">
-            <span>|</span>
-            <span
-              className={`bg-[#EDEEF2] p-3 rounded-xl ${
-                menuToggle ? "hidden" : ""
-              }`}
-              onClick={() => setMenuToggle(!menuToggle)}
-            >
-              <RxHamburgerMenu
-                className={`text-xl text-[#83859C] ${
-                  menuToggle ? "hidden" : ""
-                }`}
+          <div className="lg:block hidden">
+            <div className="search bg-[#EDEEF2] rounded-xl flex justify-end items-center px-2.5">
+              <input
+                className="bg-[#EDEEF2] w-full py-2 outline-none rounded-xl"
+                placeholder="Search"
+                type="text"
+                name=""
+                id=""
               />
-            </span>
-            <span
-              className={`bg-[#EDEEF2] p-3 rounded-xl ${
-                menuToggle ? "" : "hidden"
-              }`}
-              onClick={() => setMenuToggle(!menuToggle)}
-            >
-              <RxCross2 className={`text-xl text-[#83859C] `} />
-            </span>
+              <CiSearch className="text-xl text-[#83859C]" />
+            </div>
           </div>
-          <div
-            className={`menu__content  absolute w-full left-0 bg-brandBlue rounded-xl p-4 ${
-              menuToggle ? "" : "hidden"
-            }`}
-          >
+        </div>
+
+        <div className="flex justify-end items-center gap-6 lg">
+          <span className="lg:block hidden">
             {navLink.map((data, index) => (
               <Link
-                className="text-base font-bold hover:text-brandBlue block py-2 text-white"
+                className="text-base font-bold hover:text-brandBlue mx-3"
                 key={index}
                 href={data.navLink}
               >
                 {data.navText}
               </Link>
             ))}
+            |
+          </span>
+
+          <div className="cart bg-[#F3F4FF] p-3 rounded-xl relative">
+            <p className="bg-brandBlue text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
+              4
+            </p>
+            <span>
+              <LuShoppingBag className="text-xl text-brandBlue" />
+            </span>
+          </div>
+          <div className="avatar">
+            {/* <Image
+            className="rounded-xl focus:outline outline-offset-2 outline-1 outline-blue-500"
+            width={40}
+            height={40}
+            src="/assets/pizzalicious-avatar-image.png"
+            alt="avatar"
+          /> */}
+            <span
+              className="cursor-pointer"
+              onClick={() => setProfileDropDown(!profileDropDown)}
+            >
+              <img
+                className="w-10 h-10 rounded-xl "
+                src="/assets/pizzalicious-avatar-image.png"
+                alt=""
+              />
+            </span>
+            <div
+              className={`absolute w-40 right-20 lg:right-0 bg-brandBlue rounded-xl p-4 ${
+                profileDropDown ? "" : "hidden"
+              }`}
+            >
+              <Link
+                className="block text-white font-bold mb-2"
+                href="/dashboard"
+              >
+                Dashboard
+              </Link>
+              <Link className="block text-white font-bold my-2" href="/profile">
+                Profile
+              </Link>
+              <hr className="my-2 " />
+              <div className="block text-white font-bold mt-2">Sign out</div>
+            </div>
+          </div>
+          <div className="mobile__menu block lg:hidden">
+            <div className="flex gap-2 items-center">
+              <span>|</span>
+              <span
+                className={`bg-[#EDEEF2] p-3 rounded-xl ${
+                  menuToggle ? "hidden" : ""
+                }`}
+                onClick={() => setMenuToggle(!menuToggle)}
+              >
+                <RxHamburgerMenu
+                  className={`text-xl text-[#83859C] ${
+                    menuToggle ? "hidden" : ""
+                  }`}
+                />
+              </span>
+              <span
+                className={`bg-[#EDEEF2] p-3 rounded-xl ${
+                  menuToggle ? "" : "hidden"
+                }`}
+                onClick={() => setMenuToggle(!menuToggle)}
+              >
+                <RxCross2 className={`text-xl text-[#83859C] `} />
+              </span>
+            </div>
+            <div
+              className={`menu__content  absolute w-full left-0 bg-brandBlue rounded-xl p-4 ${
+                menuToggle ? "" : "hidden"
+              }`}
+            >
+              {navLink.map((data, index) => (
+                <Link
+                  className="text-base font-bold hover:text-brandBlue block py-2 text-white"
+                  key={index}
+                  href={data.navLink}
+                >
+                  {data.navText}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
