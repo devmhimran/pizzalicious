@@ -63,7 +63,7 @@ const Navbar = () => {
             |
           </span>
 
-          <div className="cart bg-[#F3F4FF] p-3 rounded-xl relative">
+          <div className="cart bg-[#fff3f3] p-3 rounded-xl relative">
             <p className="bg-brandBlue text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
               4
             </p>
@@ -101,7 +101,7 @@ const Navbar = () => {
                 Dashboard
               </Link>
               <Link className="block text-white font-bold my-2" href="/profile">
-                Profile
+                Settings
               </Link>
               <hr className="my-2 " />
               <div className="block text-white font-bold mt-2">Sign out</div>
