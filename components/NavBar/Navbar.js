@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex items-center gap-12">
           <div className="logo">
             <h1
-              className="text-2xl leading-normal font-bold uppercase text-brandBlue"
+              className="text-2xl leading-normal font-bold uppercase text-brandColor01"
               onClick={() => router.push("/")}
             >
               pizza <br />
@@ -53,7 +53,7 @@ const Navbar = () => {
           <span className="lg:block hidden">
             {navLink.map((data, index) => (
               <Link
-                className="text-base font-bold hover:text-brandBlue mx-3"
+                className="text-base font-bold hover:text-brandColor01 mx-3"
                 key={index}
                 href={data.navLink}
               >
@@ -64,11 +64,11 @@ const Navbar = () => {
           </span>
 
           <div className="cart bg-[#fff3f3] p-3 rounded-xl relative">
-            <p className="bg-brandBlue text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
+            <p className="bg-brandColor01 text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
               4
             </p>
             <span>
-              <LuShoppingBag className="text-xl text-brandBlue" />
+              <LuShoppingBag className="text-xl text-brandColor01" />
             </span>
           </div>
           <div className="avatar">
@@ -90,7 +90,7 @@ const Navbar = () => {
               />
             </span>
             <div
-              className={`absolute w-40 right-20 lg:right-0 bg-brandBlue rounded-xl p-4 ${
+              className={`absolute w-40 right-20 lg:right-0 bg-brandColor01 rounded-xl p-4 ${
                 profileDropDown ? "" : "hidden"
               }`}
             >
@@ -100,7 +100,10 @@ const Navbar = () => {
               >
                 Dashboard
               </Link>
-              <Link className="block text-white font-bold my-2" href="/profile">
+              <Link
+                className="block text-white font-bold my-2"
+                href="/settings"
+              >
                 Settings
               </Link>
               <hr className="my-2 " />
@@ -132,13 +135,13 @@ const Navbar = () => {
               </span>
             </div>
             <div
-              className={`menu__content  absolute w-full left-0 bg-brandBlue rounded-xl p-4 ${
+              className={`menu__content  absolute w-full left-0 bg-brandColor01 rounded-xl p-4 ${
                 menuToggle ? "" : "hidden"
               }`}
             >
               {navLink.map((data, index) => (
                 <Link
-                  className="text-base font-bold hover:text-brandBlue block py-2 text-white"
+                  className="text-base font-bold hover:text-brandColor01 block py-2 text-white"
                   key={index}
                   href={data.navLink}
                 >
