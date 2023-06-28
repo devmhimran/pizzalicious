@@ -1,5 +1,13 @@
 /* #FF4E4E */
 
+.dashboard__active__nav > .dashboard__nav__container {
+  background-color: #ff4e4e;
+  color: #fff;
+}
+.dashboard__active__nav > .dashboard__nav__container .dashboard__nav__icon {
+  color: #fff;
+}
+
 .dashboard__nav:hover > .dashboard__nav__container {
   background-color: #ff4e4e;
   color: #fff;
