@@ -27,13 +27,20 @@ const Navbar = () => {
       <div className="container mx-auto py-4 grid grid-cols-2 justify-between lg:px-0 px-4 relative ">
         <div className="flex items-center gap-12">
           <div className="logo">
-            <h1
+            {/* <h1
               className="text-2xl leading-normal font-bold uppercase text-brandColor01"
               onClick={() => router.push("/")}
             >
               pizza <br />
               licious
-            </h1>
+            </h1> */}
+            <Link className="" href="/">
+              <img
+                className=" inline-block"
+                src="/assets/pizzalicious-logo.png"
+                alt=""
+              />{" "}
+            </Link>
           </div>
           <div className="lg:block hidden">
             <div className="search bg-[#EDEEF2] rounded-xl flex justify-end items-center px-2.5">
