@@ -11,7 +11,7 @@ export default function Home() {
       {/* <Hero /> */}
       {/* <Blob />
       <PizzaShowcase /> */}
-      <AllPizzas />
+      <AllPizzas page="home" />
     </main>
   );
 }
