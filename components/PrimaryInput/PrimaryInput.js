@@ -1,4 +1,4 @@
-const PrimaryInput = ({ className, ...props }) => {
+const PrimaryInput = ({ className, onBlur, ...props }) => {
   return (
     <input
       className={
@@ -6,6 +6,7 @@ const PrimaryInput = ({ className, ...props }) => {
         className
       }
       {...props}
+      onBlur={onBlur}
     />
   );
 };

@@ -97,21 +97,47 @@ const Navbar = () => {
               />
             </span>
             <div
-              className={`absolute w-40 right-20 lg:right-0 bg-brandColor01 z-10 rounded-xl p-4 ${
+              className={`absolute w-40 right-20  lg:right-0 bg-brandColor01 z-10 rounded-xl p-4 ${
                 profileDropDown ? "" : "hidden"
               }`}
             >
               <Link
-                className="block text-white font-bold mb-2"
+                className="block text-white font-bold text-base mb-2"
                 href="/dashboard"
               >
                 Dashboard
               </Link>
-              <Link
-                className="block text-white font-bold my-2"
+              <hr className="my-2 " />
+              <p
+                className="block text-white font-bold text-base my-2"
                 href="/settings"
               >
                 Settings
+              </p>
+
+              <Link
+                className="block text-white font-semibold text-base my-2"
+                href="/settings"
+              >
+                Account
+              </Link>
+              <Link
+                className="block text-white font-semibold my-2"
+                href="/settings/address"
+              >
+                Address
+              </Link>
+              <Link
+                className="block text-white font-semibold my-2"
+                href="/settings/orders"
+              >
+                Orders
+              </Link>
+              <Link
+                className="block text-white font-semibold my-2"
+                href="/settings/security"
+              >
+                Security
               </Link>
               <hr className="my-2 " />
               <div className="block text-white font-bold mt-2">Sign out</div>

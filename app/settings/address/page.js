@@ -5,7 +5,7 @@ const page = () => {
     <div className="relative h-full">
       <h2 className="text-xl font-semibold">Additional Information</h2>
       <div className="border rounded-2xl p-6 mt-5">
-        <div className="flex gap-5 mt-4">
+        <div className="block lg:flex gap-5 mt-4">
           <form className="w-full">
             <h3 className="text-lg font-semibold mb-6">Billing Address</h3>
             <div className="my-3">
@@ -68,7 +68,7 @@ const page = () => {
             </div>
           </form>
 
-          <form className="w-full">
+          <form className="w-full mt-5 lg:mt-0">
             <h3 className="text-lg font-semibold mb-6">Shipping Address</h3>
             <div className="my-3">
               <input
