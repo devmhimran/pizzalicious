@@ -1,11 +1,11 @@
-
+import AllPizzas from "@/components/AllPizzas/AllPizzas";
 
 const page = () => {
-    return (
-        <div>
-            Out Hot Deals 🔥
-        </div>
-    );
+  return (
+    <div>
+      <AllPizzas />
+    </div>
+  );
 };
 
 export default page;

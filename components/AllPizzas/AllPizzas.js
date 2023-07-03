@@ -18,29 +18,21 @@ const AllPizzas = ({ page }) => {
     queryFn: getPizzas,
   });
 
-  if (page === "home") {
-    if (!isLoading) {
-      content = pizzaData
-        .slice(0, 6)
-        .map((data) => <PizzaCard key={data._id} data={data} />);
-    }
-  } else {
-    if (!isLoading) {
-      content = pizzaData.map((data) => (
-        <PizzaCard key={data._id} data={data} />
-      ));
-    }
-  }
   if (isLoading) {
     return <PreLoader />;
+  } else if (page === "home") {
+    content = pizzaData
+      .slice(0, 8)
+      .map((data) => <PizzaCard key={data._id} data={data} />);
+  } else {
+    content = pizzaData.map((data) => <PizzaCard key={data._id} data={data} />);
   }
+
   console.log(pizzaData);
 
   return (
-    <div className="container mx-auto lg:grid grid-cols-3 lg:grid-cols-3 py-16 gap-16 px-4">
-      {pizzaData.map((data) => (
-        <PizzaCard key={data._id} data={data} />
-      ))}
+    <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 py-16 gap-6 lg:gap-10 px-4">
+      {content}
     </div>
   );
 };
