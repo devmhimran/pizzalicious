@@ -1,4 +1,5 @@
 import PrimaryInput from "@/components/PrimaryInput/PrimaryInput";
+import Head from "next/head";
 
 const page = () => {
   const handleSubmit = (e) => {
@@ -23,38 +24,22 @@ const page = () => {
 
         <div className="flex gap-5 mt-4">
           <div className="w-full">
-            <p className="text-brandColor04">First name</p>
             <PrimaryInput
               type="text"
-              placeholder="Enter first name"
+              placeholder="First Name"
               name="firstName"
             />
           </div>
           <div className="w-full">
-            <p className="text-brandColor04">Last name</p>
-            <PrimaryInput
-              type="text"
-              placeholder="Enter last name"
-              name="lastName"
-            />
+            <PrimaryInput type="text" placeholder="Last Name" name="lastName" />
           </div>
         </div>
         <div className="flex gap-5 mt-7">
           <div className="w-full">
-            <p className="text-brandColor04">Email</p>
-            <PrimaryInput
-              type="text"
-              placeholder="Enter your email"
-              name="email"
-            />
+            <PrimaryInput type="text" placeholder="Email" name="email" />
           </div>
           <div className="w-full">
-            <p className="text-brandColor04">Phone</p>
-            <PrimaryInput
-              type="text"
-              placeholder="Enter phone number"
-              name="phone"
-            />
+            <PrimaryInput type="text" placeholder="Phone Number" name="phone" />
           </div>
         </div>
         <div className=" mt-10">

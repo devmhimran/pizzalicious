@@ -97,7 +97,7 @@ const Navbar = () => {
               />
             </span>
             <div
-              className={`absolute w-40 right-20 lg:right-0 bg-brandColor01 rounded-xl p-4 ${
+              className={`absolute w-40 right-20 lg:right-0 bg-brandColor01 z-10 rounded-xl p-4 ${
                 profileDropDown ? "" : "hidden"
               }`}
             >
@@ -142,7 +142,7 @@ const Navbar = () => {
               </span>
             </div>
             <div
-              className={`menu__content  absolute w-full left-0 bg-brandColor01 rounded-xl p-4 ${
+              className={`menu__content  absolute w-full left-0 bg-brandColor01 z-10 rounded-xl p-4 ${
                 menuToggle ? "" : "hidden"
               }`}
             >

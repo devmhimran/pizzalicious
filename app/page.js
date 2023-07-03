@@ -1,6 +1,7 @@
 import Blob from "@/components/Blob/Blob";
 import Hero from "@/components/Hero/Hero";
 import PizzaShowcase from "@/components/PizzaShowcase/PizzaShowcase";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {

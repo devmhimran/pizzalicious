@@ -20,9 +20,9 @@ const SettingsSidebar = ({ pathname }) => {
       icon: PiMapPinLight,
     },
     {
-      navText: "Payment method",
-      navSubText: "Connected credit cards",
-      navLink: "/settings/payment-method",
+      navText: "Orders",
+      navSubText: "Check your orders",
+      navLink: "/settings/orders",
       icon: AiOutlineCreditCard,
     },
     {
