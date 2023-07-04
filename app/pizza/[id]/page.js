@@ -1,10 +1,14 @@
 "use client";
 
 import PreLoader from "@/components/PreLoader/PreLoader";
+import PrimaryInput from "@/components/PrimaryInput/PrimaryInput";
 import { useQuery } from "@tanstack/react-query";
+import React, { useEffect, useState } from "react";
 
 const page = ({ params }) => {
   console.log(params);
+
+  const [smallPrice, setSmallPrice] = useState(null);
   const getPizzaData = () =>
     fetch(
       `https://api-creator-server.vercel.app/pizzalicious/pizzalicious/${params.id}`
@@ -21,7 +25,7 @@ const page = ({ params }) => {
   if (isLoading) {
     return <PreLoader />;
   }
-  console.log(pizzaData);
+
   return (
     <div className="w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-2 py-16 gap-6 lg:gap-10 px-4">
       <div className="pizza__img">
@@ -43,6 +47,16 @@ const page = ({ params }) => {
             </li>
           ))}
         </ol>
+        <div className="cart__items flex items-center gap-6 mt-6">
+          <div className="w-20">
+            <PrimaryInput type="number" defaultValue="1" />
+          </div>
+          <div className="cart__btn">
+            <button className="bg-brandColor01 px-5 py-3 rounded-xl text-white font-semibold">
+              Add to cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

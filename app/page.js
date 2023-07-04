@@ -10,10 +10,8 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      {/* <Blob />
-      <PizzaShowcase /> */}
+      {/* <Blob /> */}
       <AllPizzas page="home" />
-      <Footer />
     </main>
   );
 }

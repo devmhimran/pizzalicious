@@ -4,6 +4,7 @@ import "./globals.css";
 import { fonts } from "@/utlis/fonts/font";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <body className={fonts.nunito.className}>
           <Navbar />
           {children}
+          <Footer />
           <Toaster />
         </body>
       </QueryClientProvider>

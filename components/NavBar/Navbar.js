@@ -17,10 +17,10 @@ const Navbar = () => {
       navText: "Our Hot Deals 🔥",
       navLink: "/our-hot-deals",
     },
-    {
-      navText: "My Orders",
-      navLink: "/my-orders",
-    },
+    // {
+    //   navText: "My Orders",
+    //   navLink: "/my-orders",
+    // },
   ];
   return (
     <nav className="border-b">
@@ -114,12 +114,12 @@ const Navbar = () => {
               >
                 Address
               </Link>
-              <Link
+              {/* <Link
                 className="block text-white font-semibold my-2"
                 href="/account/orders"
               >
                 Orders
-              </Link>
+              </Link> */}
               <Link
                 className="block text-white font-semibold my-2"
                 href="/account/security"

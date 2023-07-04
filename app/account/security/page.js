@@ -42,7 +42,7 @@ const page = () => {
   console.log(errors);
 
   return (
-    <div className="relative h-full">
+    <div className="relative h-full mb-0 lg:mb-10">
       <h2 className="text-xl font-semibold">Security</h2>
       <div className="border rounded-2xl p-6 mt-5">
         <form onSubmit={handleSubmit}>

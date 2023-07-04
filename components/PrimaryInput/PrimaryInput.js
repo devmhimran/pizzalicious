@@ -6,6 +6,7 @@ const PrimaryInput = ({
   onBlur,
   onChange,
   placeholder,
+  defaultValue,
 }) => {
   return (
     <input
@@ -19,6 +20,7 @@ const PrimaryInput = ({
       onChange={onChange}
       placeholder={placeholder}
       onBlur={onBlur}
+      defaultValue={defaultValue}
     />
   );
 };

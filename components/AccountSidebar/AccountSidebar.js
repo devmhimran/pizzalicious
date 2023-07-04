@@ -19,12 +19,12 @@ const AccountSidebar = ({ pathname }) => {
       navLink: "/account/address",
       icon: PiMapPinLight,
     },
-    {
-      navText: "Orders",
-      navSubText: "Check your orders",
-      navLink: "/account/orders",
-      icon: AiOutlineCreditCard,
-    },
+    // {
+    //   navText: "Orders",
+    //   navSubText: "Check your orders",
+    //   navLink: "/account/orders",
+    //   icon: AiOutlineCreditCard,
+    // },
     {
       navText: "Security",
       navSubText: "Password, 2FA",
