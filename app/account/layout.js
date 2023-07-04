@@ -1,5 +1,6 @@
 "use client";
-import SettingsSidebar from "@/components/SettingsSidebar/SettingsSidebar";
+
+import AccountSidebar from "@/components/AccountSidebar/AccountSidebar";
 import { usePathname, useRouter } from "next/navigation";
 
 const layout = ({ children }) => {
@@ -11,7 +12,7 @@ const layout = ({ children }) => {
       className={`container mx-auto lg:grid grid-cols-3 lg:grid-cols-3 py-16 gap-16 px-4`}
     >
       <div className="hidden lg:block">
-        <SettingsSidebar pathname={pathname} />
+        <AccountSidebar pathname={pathname} />
       </div>
       <div className="col-span-2 w-full">{children}</div>
     </div>

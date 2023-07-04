@@ -3,6 +3,7 @@ import Navbar from "@/components/NavBar/Navbar";
 import "./globals.css";
 import { fonts } from "@/utlis/fonts/font";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <body className={fonts.nunito.className}>
           <Navbar />
           {children}
+          <Toaster />
         </body>
       </QueryClientProvider>
     </html>

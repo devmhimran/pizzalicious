@@ -1,11 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { BsClock } from "react-icons/bs";
 
 const PizzaCard = ({ data }) => {
   const { _id, name, description, sizes, image, ingredients } = data;
   const [smallPrice, setSmallPrice] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     const findSmallPrice = () => {
@@ -20,7 +22,10 @@ const PizzaCard = ({ data }) => {
   }, [data]);
   console.log(smallPrice);
   return (
-    <div className="text-black border rounded-2xl">
+    <div
+      onClick={() => router.push(`/pizza/${_id}`)}
+      className="text-black border rounded-2xl"
+    >
       <img className="rounded-t-2xl" src={image} alt={name} />
       <div className="pizza__detail p-4">
         <p className="font-bold text-lg">{name}</p>

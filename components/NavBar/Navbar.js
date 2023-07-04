@@ -27,13 +27,6 @@ const Navbar = () => {
       <div className="container mx-auto py-4 grid grid-cols-2 justify-between lg:px-0 px-4 relative ">
         <div className="flex items-center gap-12">
           <div className="logo">
-            {/* <h1
-              className="text-2xl leading-normal font-bold uppercase text-brandColor01"
-              onClick={() => router.push("/")}
-            >
-              pizza <br />
-              licious
-            </h1> */}
             <Link className="" href="/">
               <img
                 className=" inline-block"
@@ -42,7 +35,7 @@ const Navbar = () => {
               />{" "}
             </Link>
           </div>
-          <div className="lg:block hidden">
+          {/* <div className="lg:block hidden">
             <div className="search bg-[#EDEEF2] rounded-xl flex justify-end items-center px-2.5">
               <input
                 className="bg-[#EDEEF2] w-full py-2 outline-none rounded-xl"
@@ -53,7 +46,7 @@ const Navbar = () => {
               />
               <CiSearch className="text-xl text-[#83859C]" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex justify-end items-center gap-6 lg">
@@ -105,37 +98,31 @@ const Navbar = () => {
                 className="block text-white font-bold text-base mb-2"
                 href="/dashboard"
               >
-                Dashboard
+                Account
               </Link>
               <hr className="my-2 " />
-              <p
-                className="block text-white font-bold text-base my-2"
-                href="/settings"
-              >
-                Settings
-              </p>
 
               <Link
                 className="block text-white font-semibold text-base my-2"
-                href="/settings"
+                href="/account"
               >
-                Account
+                Profile
               </Link>
               <Link
                 className="block text-white font-semibold my-2"
-                href="/settings/address"
+                href="/account/address"
               >
                 Address
               </Link>
               <Link
                 className="block text-white font-semibold my-2"
-                href="/settings/orders"
+                href="/account/orders"
               >
                 Orders
               </Link>
               <Link
                 className="block text-white font-semibold my-2"
-                href="/settings/security"
+                href="/account/security"
               >
                 Security
               </Link>

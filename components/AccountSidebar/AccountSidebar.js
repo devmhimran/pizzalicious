@@ -2,33 +2,33 @@ import React from "react";
 import { AiOutlineUser, AiOutlineCreditCard } from "react-icons/ai";
 import { PiMapPinLight } from "react-icons/pi";
 import { BsShield } from "react-icons/bs";
-import styles from "./SettingSidebar.module.css";
+import styles from "./AccountSidebar.module.css";
 import Link from "next/link";
 
-const SettingsSidebar = ({ pathname }) => {
+const AccountSidebar = ({ pathname }) => {
   const dashboardNavLink = [
     {
       navText: "Account",
       navSubText: "Personal information",
-      navLink: "/settings",
+      navLink: "/account",
       icon: AiOutlineUser,
     },
     {
       navText: "Address",
       navSubText: "Shipping addresses",
-      navLink: "/settings/address",
+      navLink: "/account/address",
       icon: PiMapPinLight,
     },
     {
       navText: "Orders",
       navSubText: "Check your orders",
-      navLink: "/settings/orders",
+      navLink: "/account/orders",
       icon: AiOutlineCreditCard,
     },
     {
       navText: "Security",
       navSubText: "Password, 2FA",
-      navLink: "/settings/security",
+      navLink: "/account/security",
       icon: BsShield,
     },
   ];
@@ -38,12 +38,11 @@ const SettingsSidebar = ({ pathname }) => {
   return (
     <div className={`container mx-auto `}>
       <div>
-        <h2 className="text-xl font-semibold">Settings</h2>
+        <h2 className="text-xl font-semibold">account</h2>
         {dashboardNavLink.map((data, index) => (
           <>
             <Link key={index} href={data.navLink}>
               <div
-                key={index}
                 className={`flex items-center gap-3.5 mt-5 p-4 cursor-pointer
                 border border-1 rounded-xl my-2 ${
                   pathname === data.navLink
@@ -72,4 +71,4 @@ const SettingsSidebar = ({ pathname }) => {
   );
 };
 
-export default SettingsSidebar;
+export default AccountSidebar;
