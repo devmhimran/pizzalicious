@@ -2,12 +2,11 @@
 
 import PreLoader from "@/components/PreLoader/PreLoader";
 import PrimaryInput from "@/components/PrimaryInput/PrimaryInput";
+import SinglePizzaSkeleton from "@/components/SinglePizzaSkeleton/SinglePizzaSkeleton";
 import { useQuery } from "@tanstack/react-query";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const page = ({ params }) => {
-  console.log(params);
-
+const Page = ({ params }) => {
   const [smallPrice, setSmallPrice] = useState(null);
   const getPizzaData = () =>
     fetch(
@@ -23,38 +22,58 @@ const page = ({ params }) => {
   });
 
   if (isLoading) {
-    return <PreLoader />;
+    return <SinglePizzaSkeleton />;
   }
 
   return (
-    <div className="w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-2 py-16 gap-6 lg:gap-10 px-4">
-      <div className="pizza__img">
-        <img className="w-11/12 rounded-xl" src={pizzaData.image} alt="" />
-      </div>
-      <div className="pizza__detail">
-        <h1 className="text-5xl font-bold mb-8">{pizzaData.name}</h1>
-        <p className="text-lg text-brandColor04 font-semibold">
-          {pizzaData.description}
-        </p>
-        <p className="text-2xl font-bold my-6">Ingredients</p>
-        <ol>
-          {pizzaData.ingredients.map((data, index) => (
-            <li
-              className="list-disc text-lg text-brandColor04 font-semibold"
-              key={index}
-            >
-              {data}
-            </li>
-          ))}
-        </ol>
-        <div className="cart__items flex items-center gap-6 mt-6">
-          <div className="w-20">
-            <PrimaryInput type="number" defaultValue="1" />
+    <div className="min-h-screen bg-brand__bg__color">
+      <div className="w-8/12  mx-auto  grid grid-cols-1 lg:grid-cols-2 py-16 gap-6 lg:gap-9 px-4">
+        <div className="pizza__img">
+          <img className="w-full rounded-lg" src={pizzaData?.image} alt="" />
+        </div>
+        <div className="pizza__detail border rounded p-8 bg-white">
+          <h1 className="text-4xl font-bold mb-8">{pizzaData?.name}</h1>
+          <p className="text-lg text-brandColor04 font-normal">
+            {pizzaData?.description}
+          </p>
+          <p className="text-2xl font-bold my-6">Ingredients</p>
+          <ol>
+            {pizzaData?.ingredients.map((data, index) => (
+              <li
+                className="list-disc text-lg text-brandColor04 font-normal"
+                key={index}
+              >
+                {data}
+              </li>
+            ))}
+          </ol>
+          <div className="prices my-5">
+            <div className="sizes flex items-center">
+              <p className="font-semibold">Sizes: </p>
+              {pizzaData?.sizes.map((size) => (
+                <>
+                  <button className="py-1.5 px-2 bg-[#fff3f3] border border-brandColor01 text-brandColor01 rounded font-normal mx-1  hover:bg-brandColor01 hover:text-white">
+                    {size.name}
+                  </button>
+                </>
+              ))}
+            </div>
+            <div className="price my-5">
+              <p className="font-semibold">
+                Price: <span className="text-2xl"> $ </span>
+                <span className="text-5xl font-bold">30</span>
+              </p>
+            </div>
           </div>
-          <div className="cart__btn">
-            <button className="bg-brandColor01 px-5 py-3 rounded-xl text-white font-semibold">
-              Add to cart
-            </button>
+          <div className="cart__items flex items-center gap-6 mt-6">
+            <div className="w-20">
+              <PrimaryInput type="number" defaultValue="1" />
+            </div>
+            <div className="cart__btn">
+              <button className="bg-brandColor01 px-5 py-3 rounded text-white font-normal">
+                Add to cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -62,4 +81,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

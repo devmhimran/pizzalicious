@@ -1,27 +1,35 @@
 const PrimaryInput = ({
-  className,
+  className = "",
   type,
   name,
   value,
   onBlur,
   onChange,
   placeholder,
+  label,
+  inputId,
   defaultValue,
 }) => {
   return (
-    <input
-      className={
-        `border rounded-lg p-3 w-full outline-none focus:border-brandColor01` +
-        className
-      }
-      type={type}
-      name={name}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      onBlur={onBlur}
-      defaultValue={defaultValue}
-    />
+    <div className="w-full">
+      <label className="text-base font-semibold" for={inputId}>
+        {label}
+      </label>
+      <input
+        className={
+          `border rounded p-3 w-full outline-none focus:border-brandColor01 mt-1` +
+          className
+        }
+        id={inputId}
+        type={type}
+        name={name}
+        value={value}
+        onBlur={onBlur}
+        onChange={onChange}
+        placeholder={placeholder}
+        defaultValue={defaultValue}
+      />
+    </div>
   );
 };
 

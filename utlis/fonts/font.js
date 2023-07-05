@@ -1,7 +1,7 @@
-import { Nunito } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-const nunito = Nunito({ subsets: ["latin"] });
+const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const fonts = {
-  nunito,
+  plus_jakarta_sans,
 };

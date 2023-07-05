@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="min-h-screen bg-brand__bg__color">
       <Hero />
       {/* <Blob /> */}
       <AllPizzas page="home" />

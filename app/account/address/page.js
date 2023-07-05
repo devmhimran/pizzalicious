@@ -23,7 +23,7 @@ const shippingAddressValidationSchema = Yup.object({
   postalCode: Yup.string().max(6).required("please enter postal code"),
 });
 
-const page = () => {
+const Page = () => {
   const billingAddress = {
     firstName: "John",
     lastName: "Doe",
@@ -312,4 +312,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <QueryClientProvider client={queryClient}>
-        <body className={fonts.nunito.className}>
+        <body className={`${fonts.plus_jakarta_sans.className} min-h-screen`}>
           <Navbar />
           {children}
           <Footer />

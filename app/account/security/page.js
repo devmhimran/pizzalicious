@@ -15,7 +15,7 @@ const resetPassword = Yup.object({
     .oneOf([Yup.ref("newPassword"), null], "Please enter correct password"),
 });
 
-const page = () => {
+const Page = () => {
   const initialValues = {
     newPassword: "",
     confirmPassword: "",
@@ -108,4 +108,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

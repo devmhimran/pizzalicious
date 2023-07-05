@@ -9,7 +9,7 @@ const layout = ({ children }) => {
   const pathname = usePathname();
   return (
     <div
-      className={`container mx-auto lg:grid grid-cols-3 lg:grid-cols-3 py-16 gap-16 px-4`}
+      className={`container mx-auto min-h-screen lg:grid grid-cols-3 lg:grid-cols-3 py-16 gap-16 px-4`}
     >
       <div className="hidden lg:block">
         <AccountSidebar pathname={pathname} />

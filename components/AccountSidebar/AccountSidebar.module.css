@@ -1,7 +1,7 @@
 /* #FF4E4E */
 
 .dashboard__active__nav > .dashboard__nav__container {
-  background-color: #ff4e4e;
+  background-color: #dc0404;
   color: #fff;
 }
 .dashboard__active__nav > .dashboard__nav__container .dashboard__nav__icon {
@@ -9,7 +9,7 @@
 }
 
 .dashboard__nav:hover > .dashboard__nav__container {
-  background-color: #ff4e4e;
+  background-color: #dc0404;
   color: #fff;
 }
 .dashboard__nav:hover > .dashboard__nav__container .dashboard__nav__icon {

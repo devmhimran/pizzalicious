@@ -1,6 +1,6 @@
 import AllPizzas from "@/components/AllPizzas/AllPizzas";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <AllPizzas />
@@ -8,4 +8,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

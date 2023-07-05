@@ -20,21 +20,19 @@ const PizzaCard = ({ data }) => {
     };
     findSmallPrice();
   }, [data]);
-  console.log(smallPrice);
+
   return (
     <div
       onClick={() => router.push(`/pizza/${_id}`)}
-      className="text-black border rounded-2xl cursor-pointer"
+      className="text-black border rounded cursor-pointer bg-white"
     >
-      <img className="rounded-t-2xl" src={image} alt={name} />
+      <img className="rounded-t" src={image} alt={name} />
       <div className="pizza__detail p-4">
-        <p className="font-bold text-lg">{name}</p>
+        <p className="font-semibold text-lg">{name}</p>
         <div className="flex items-center gap-1.5 my-1">
           <BsClock className="text-brandColor05" />
-          <p className="font-semibold text-sm text-brandColor05">30-40 min</p>
-          <p className="font-semibold text-sm text-brandColor05">
-            $ {smallPrice}
-          </p>
+          <p className="font-normal text-sm text-brandColor05">30-40 min</p>
+          <p className="font-normal text-sm text-brandColor05">${smallPrice}</p>
         </div>
       </div>
     </div>
