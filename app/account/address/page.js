@@ -5,22 +5,22 @@ import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 
 const billingAddressValidationSchema = Yup.object({
-  firstName: Yup.string().max(20).required("please enter your first name"),
-  lastName: Yup.string().max(20).required("please enter last name"),
-  addressLine1: Yup.string().max(50).required("please enter address line 1"),
+  firstName: Yup.string().max(20).required("Please enter your first name"),
+  lastName: Yup.string().max(20).required("Please enter last name"),
+  addressLine1: Yup.string().max(50).required("Please enter address line 1"),
   addressLine2: Yup.string(),
-  city: Yup.string().max(20).required("please enter your town/city"),
-  postalCode: Yup.string().max(6).required("please enter postal code"),
+  city: Yup.string().max(20).required("Please enter your town/city"),
+  postalCode: Yup.string().max(6).required("Please enter postal code"),
   email: Yup.string().required("please enter your email"),
 });
 
 const shippingAddressValidationSchema = Yup.object({
-  firstName: Yup.string().max(20).required("please enter your first name"),
-  lastName: Yup.string().max(20).required("please enter last name"),
-  addressLine1: Yup.string().max(50).required("please enter address line 1"),
+  firstName: Yup.string().max(20).required("Please enter your first name"),
+  lastName: Yup.string().max(20).required("Please enter last name"),
+  addressLine1: Yup.string().max(50).required("Please enter address line 1"),
   addressLine2: Yup.string(),
-  city: Yup.string().max(20).required("please enter your town/city"),
-  postalCode: Yup.string().max(6).required("please enter postal code"),
+  city: Yup.string().max(20).required("Please enter your town/city"),
+  postalCode: Yup.string().max(6).required("Please enter postal code"),
 });
 
 const Page = () => {
@@ -67,12 +67,11 @@ const Page = () => {
 
   return (
     <div className="relative h-full">
-      <h2 className="text-xl font-semibold">Additional Information</h2>
-      <div className="border rounded-md p-6 mt-5 bg-white">
+      <div className="border rounded-md p-6 bg-white">
         <div className="block lg:flex gap-5 mt-4">
           <form className="w-full" onSubmit={billingAddressFormik.handleSubmit}>
             <h3 className="text-lg font-semibold mb-6">Billing Address</h3>
-            <div className="my-3">
+            <div className="my-2">
               <PrimaryInput
                 type="text"
                 name="firstName"

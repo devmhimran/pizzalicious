@@ -17,8 +17,8 @@ const Page = () => {
 
   return (
     <div className="relative ">
-      <h2 className="text-xl font-semibold">Account</h2>
-      <div className="border rounded-md p-6 mt-5 bg-white">
+      {/* <h2 className="text-xl font-semibold">Account</h2> */}
+      <div className="border rounded-md p-6 bg-white">
         <h3 className="text-lg font-semibold mb-6">Personal information</h3>
         <div className="flex items-center gap-4">
           <img
@@ -49,7 +49,7 @@ const Page = () => {
             inputId="lastName"
           />
         </div>
-        <div className="block lg:flex gap-5 mt-4">
+        <div className="block lg:flex gap-5">
           <PrimaryInput
             type="email"
             name="email"

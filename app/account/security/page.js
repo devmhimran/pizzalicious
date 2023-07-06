@@ -42,13 +42,12 @@ const Page = () => {
   console.log(errors);
 
   return (
-    <div className="relative h-full mb-0 lg:mb-10">
-      <h2 className="text-xl font-semibold">Security</h2>
-      <div className="border rounded-md p-6 mt-5">
+    <div className="relative h-full mb-0 lg:mb-10 bg-white">
+      <div className="border rounded-md p-6">
         <form onSubmit={handleSubmit}>
           <h3 className="text-lg font-semibold mb-6">Reset your password</h3>
 
-          <div className="block lg:flex gap-5 mt-4">
+          <div className="mt-4">
             <div className="w-full py-2 lg:my-0">
               {/* <input
                 className="border rounded-lg p-3 w-full outline-none focus:border-brandColor01 my-2 lg:my-0"
@@ -62,10 +61,9 @@ const Page = () => {
               <PrimaryInput
                 type="password"
                 name="newPassword"
-                value={values.newPassword}
-                onBlur={handleBlur}
-                onChange={handleChange}
-                placeholder="New Password"
+                label="New Password"
+                inputId="newPassword"
+                onBlur={handleChange}
               />
               {errors.newPassword && touched.newPassword ? (
                 <small className="text-red-500">{errors.newPassword}</small>
@@ -85,9 +83,9 @@ const Page = () => {
                 type="password"
                 name="confirmPassword"
                 value={values.confirmPassword}
-                onBlur={handleBlur}
-                onChange={handleChange}
-                placeholder="Confirm New Password"
+                label="Confirm Password"
+                inputId="confirmPassword"
+                onBlur={handleChange}
               />
               {errors.confirmPassword && touched.confirmPassword ? (
                 <small className="text-red-500">{errors.confirmPassword}</small>

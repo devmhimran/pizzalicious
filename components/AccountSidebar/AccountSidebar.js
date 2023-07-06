@@ -1,44 +1,41 @@
 import React from "react";
-import { AiOutlineUser, AiOutlineCreditCard } from "react-icons/ai";
-import { PiMapPinLight } from "react-icons/pi";
-import { BsShield } from "react-icons/bs";
+
 import styles from "./AccountSidebar.module.css";
 import Link from "next/link";
 
-const AccountSidebar = ({ pathname }) => {
-  const dashboardNavLink = [
-    {
-      navText: "Account",
-      navSubText: "Personal information",
-      navLink: "/account",
-      icon: AiOutlineUser,
-    },
-    {
-      navText: "Address",
-      navSubText: "Shipping addresses",
-      navLink: "/account/address",
-      icon: PiMapPinLight,
-    },
-    // {
-    //   navText: "Orders",
-    //   navSubText: "Check your orders",
-    //   navLink: "/account/orders",
-    //   icon: AiOutlineCreditCard,
-    // },
-    {
-      navText: "Security",
-      navSubText: "Password, 2FA",
-      navLink: "/account/security",
-      icon: BsShield,
-    },
-  ];
-
+const AccountSidebar = ({ pathname, dashboardNavLink }) => {
   const nonActiveNav = "hover:bg-[#fff3f3] hover:border-brandColor01";
 
   return (
-    <div className={`container mx-auto `}>
+    <div className={`h-2/5 bg-white rounded-md border p-5`}>
       <div>
-        <h2 className="text-xl font-semibold">account</h2>
+        {dashboardNavLink.map((data, index) => (
+          <>
+            <Link key={index} href={data.navLink}>
+              <div
+                className={`flex items-center gap-3.5 cursor-pointer my-3 p-2 rounded-md ${
+                  pathname === data.navLink
+                    ? styles.dashboard__active__nav +
+                      " border-brandColor01 bg-[#fff3f3]"
+                    : nonActiveNav
+                } ${styles.dashboard__nav}`}
+              >
+                <span
+                  className={`bg-[#EDEEF2] p-2 rounded-md ${styles.dashboard__nav__container}`}
+                >
+                  <data.icon
+                    className={`text-xl text-[#83859C] ${styles.dashboard__nav__icon}`}
+                  />
+                </span>
+                <div>
+                  <p className="text-lg font-semibold">{data.navText}</p>
+                </div>
+              </div>
+            </Link>
+          </>
+        ))}
+      </div>
+      {/* <div>
         {dashboardNavLink.map((data, index) => (
           <>
             <Link key={index} href={data.navLink}>
@@ -66,7 +63,7 @@ const AccountSidebar = ({ pathname }) => {
             </Link>
           </>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

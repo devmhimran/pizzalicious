@@ -32,24 +32,12 @@ const Navbar = () => {
                 className=" inline-block"
                 src="/assets/pizzalicious-logo.png"
                 alt=""
-              />{" "}
+              />
             </Link>
           </div>
-          {/* <div className="lg:block hidden">
-            <div className="search bg-[#EDEEF2] rounded-md flex justify-end items-center px-2.5">
-              <input
-                className="bg-[#EDEEF2] w-full py-2 outline-none rounded-md"
-                placeholder="Search"
-                type="text"
-                name=""
-                id=""
-              />
-              <CiSearch className="text-xl text-[#83859C]" />
-            </div>
-          </div> */}
         </div>
 
-        <div className="flex justify-end items-center gap-6 lg">
+        <div className="flex justify-end items-center gap-3 relative">
           <span className="lg:block hidden">
             {navLink.map((data, index) => (
               <Link
@@ -60,7 +48,6 @@ const Navbar = () => {
                 {data.navText}
               </Link>
             ))}
-            |
           </span>
 
           <div className="cart bg-[#fff3f3] p-3 rounded-md relative">
@@ -71,91 +58,30 @@ const Navbar = () => {
               <LuShoppingBag className="text-xl text-brandColor01" />
             </span>
           </div>
-          <div className="avatar">
-            {/* <Image
-            className="rounded-md focus:outline outline-offset-2 outline-1 outline-blue-500"
-            width={40}
-            height={40}
-            src="/assets/pizzalicious-avatar-image.png"
-            alt="avatar"
-          /> */}
-            <span
-              className="cursor-pointer"
-              onClick={() => setProfileDropDown(!profileDropDown)}
-            >
-              <img
-                className="w-10 h-10 rounded-md "
-                src="/assets/pizzalicious-avatar-image.png"
-                alt=""
-              />
-            </span>
-            <div
-              className={`absolute w-40 right-20  lg:right-0 bg-brandColor01 z-10 rounded-md p-4 ${
-                profileDropDown ? "" : "hidden"
-              }`}
-            >
-              <Link
-                className="block text-white font-bold text-base mb-2"
-                href="/dashboard"
-              >
-                Account
-              </Link>
-              <hr className="my-2 " />
 
-              <Link
-                className="block text-white font-semibold text-base my-2"
-                href="/account"
-              >
-                Profile
-              </Link>
-              <Link
-                className="block text-white font-semibold my-2"
-                href="/account/address"
-              >
-                Address
-              </Link>
-              {/* <Link
-                className="block text-white font-semibold my-2"
-                href="/account/orders"
-              >
-                Orders
-              </Link> */}
-              <Link
-                className="block text-white font-semibold my-2"
-                href="/account/security"
-              >
-                Security
-              </Link>
-              <hr className="my-2 " />
-              <div className="block text-white font-bold mt-2">Sign out</div>
-            </div>
-          </div>
           <div className="mobile__menu block lg:hidden">
-            <div className="flex gap-2 items-center">
-              <span>|</span>
+            <div className="flex gap-3 items-center">
               <span
-                className={`bg-[#EDEEF2] p-3 rounded-md ${
+                className={`bg-brandColor01 p-3 rounded-md ${
                   menuToggle ? "hidden" : ""
                 }`}
                 onClick={() => setMenuToggle(!menuToggle)}
               >
                 <RxHamburgerMenu
-                  className={`text-xl text-[#83859C] ${
-                    menuToggle ? "hidden" : ""
-                  }`}
+                  className={`text-xl text-white ${menuToggle ? "hidden" : ""}`}
                 />
               </span>
               <span
-                className={`bg-[#EDEEF2] p-3 rounded-md ${
+                className={`bg-brandColor01 p-3 rounded-md ${
                   menuToggle ? "" : "hidden"
                 }`}
                 onClick={() => setMenuToggle(!menuToggle)}
               >
-                <RxCross2 className={`text-xl text-[#83859C] `} />
+                <RxCross2 className={`text-xl text-white `} />
               </span>
             </div>
             <div
-              className={`menu__content  absolute w-full left-0 bg-brandColor01 z-10 rounded-md p-4 ${
+              className={`menu__content absolute w-40 top-14 right-0 bg-brandColor01 z-10 rounded-md p-4  ${
                 menuToggle ? "" : "hidden"
               }`}
             >
@@ -168,6 +94,15 @@ const Navbar = () => {
                   {data.navText}
                 </Link>
               ))}
+              <Link href="/account">
+                <div className="avatar">
+                  <img
+                    className="w-10 h-10 rounded-md "
+                    src="/assets/pizzalicious-avatar-image.png"
+                    alt=""
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>

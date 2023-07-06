@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
         <body className={`${fonts.plus_jakarta_sans.className} min-h-screen`}>
           <Navbar />
           {children}
-          <Footer />
           <Toaster />
         </body>
       </QueryClientProvider>

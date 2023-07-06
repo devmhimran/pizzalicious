@@ -7,65 +7,66 @@ import { MdOutlineRamenDining } from "react-icons/md";
 import { TbPaperBag } from "react-icons/tb";
 
 const Blob = () => {
+  const blobContent = [
+    {
+      icon: RiEBike2Fill,
+      heading: "Fast Delivery",
+      description: (
+        <>
+          Promise to deliver <br />
+          within 30 mins
+        </>
+      ),
+    },
+    {
+      icon: BsFillBagDashFill,
+      heading: "Pick up",
+      description: (
+        <>
+          Pickup delivery <br />
+          at your doorstep
+        </>
+      ),
+    },
+    {
+      icon: MdOutlineRamenDining,
+      heading: "Dine in",
+      description: (
+        <>
+          Enjoy your food <br />
+          fresh crispy and hot
+        </>
+      ),
+    },
+    {
+      icon: TbPaperBag,
+      heading: "Takeout",
+      description: (
+        <>
+          Order your favorite dishes and <br />
+          pick them up at the counter
+        </>
+      ),
+    },
+  ];
   return (
-    <div className="container mx-auto blob flex gap-4">
-      <div className="delivery flex w-full gap-5 py-6">
-        <div>
-          <div className="p-4 shadow-xl rounded-full text-black">
-            <RiEBike2Fill className="text-2xl" />
+    <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 pt-5 lg:pt-14">
+      {blobContent.map((data, index) => (
+        <div
+          key={index}
+          className="delivery w-full gap-5 p-6 bg-[#fff3f3] rounded-md"
+        >
+          <span className="rounded-lg bg-black p-3 w-6">
+            <data.icon className="text-3xl  block" />
+          </span>
+          <div>
+            <p className={`text-2xl text-[#090907] mb-2 font-semibold`}>
+              {data.heading}
+            </p>
+            <p className="text-base">{data.description}</p>
           </div>
         </div>
-        <div>
-          <p className={`text-2xl text-[#090907] mb-4 `}>Fast Delivery</p>
-          <p className="text-base">
-            {" "}
-            Promise to deliver <br />
-            within 30 mins
-          </p>
-        </div>
-      </div>
-      <div className="delivery flex w-full gap-5 py-6">
-        <div>
-          <div className="p-4 shadow-xl rounded-full text-black">
-            <BsFillBagDashFill className="text-2xl" />
-          </div>
-        </div>
-        <div>
-          <p className={`text-2xl text-[#090907] mb-4 `}>Pick up</p>
-          <p className="text-base">
-            Pickup delivery ay <br />
-            at your doorstep
-          </p>
-        </div>
-      </div>
-      <div className="delivery flex w-full gap-5 py-6">
-        <div>
-          <div className="p-4 shadow-xl rounded-full text-black">
-            <MdOutlineRamenDining className="text-2xl" />
-          </div>
-        </div>
-        <div>
-          <p className={`text-2xl text-[#090907] mb-4 `}>Dine in</p>
-          <p className="text-base">
-            Enjoy your food <br />
-            fresh crispy and hot
-          </p>
-        </div>
-      </div>
-      <div className="delivery flex w-full gap-5 py-6">
-        <div>
-          <div className="p-4 shadow-xl rounded-full text-black">
-            <TbPaperBag className="text-2xl" />
-          </div>
-        </div>
-        <div>
-          <p className={`text-2xl text-[#090907] mb-4 `}>Takeout</p>
-          <p className="text-base">
-            Conveniently order your favorite <br />
-            dishes and pick them up at the counter
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

@@ -12,6 +12,7 @@ export default function Home() {
       <Hero />
       {/* <Blob /> */}
       <AllPizzas page="home" />
+      <Footer />
     </main>
   );
 }

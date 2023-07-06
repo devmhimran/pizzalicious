@@ -2,9 +2,9 @@
 import { useQuery } from "@tanstack/react-query";
 import PizzaCard from "../PizzaCard/PizzaCard";
 import PreLoader from "../PreLoader/PreLoader";
+import PizzaGridSkeleton from "../PizzaGridSkeleton/PizzaGridSkeleton";
 
 const AllPizzas = ({ page }) => {
-  console.log(page);
   let content;
   const getPizzas = () =>
     fetch(
@@ -19,7 +19,7 @@ const AllPizzas = ({ page }) => {
   });
 
   if (isLoading) {
-    return <PreLoader />;
+    return <PizzaGridSkeleton />;
   } else if (page === "home") {
     content = pizzaData
       .slice(0, 8)
@@ -31,7 +31,7 @@ const AllPizzas = ({ page }) => {
   console.log(pizzaData);
 
   return (
-    <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 py-16 gap-6 lg:gap-10 px-4">
+    <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 py-16 gap-5 lg:gap-8 px-4 lg:px-0">
       {content}
     </div>
   );

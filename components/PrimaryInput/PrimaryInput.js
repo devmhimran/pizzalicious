@@ -11,7 +11,7 @@ const PrimaryInput = ({
   defaultValue,
 }) => {
   return (
-    <div className="w-full">
+    <div className="w-full lg:py-0 py-1">
       <label className="text-base font-semibold" for={inputId}>
         {label}
       </label>
