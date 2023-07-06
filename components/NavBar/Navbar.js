@@ -58,7 +58,7 @@ const Navbar = () => {
               <LuShoppingBag className="text-xl text-brandColor01" />
             </span>
           </div>
-          <Link href="/account">
+          <Link className="lg:block hidden" href="/account">
             <div className="avatar">
               <img
                 className="w-10 h-10 rounded-md "
@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="mobile__menu block lg:hidden">
             <div className="flex gap-3 items-center">
               <span
-                className={`bg-brandColor01 p-3 rounded-md ${
+                className={`bg-brandColor01 p-2.5 rounded-md ${
                   menuToggle ? "hidden" : ""
                 }`}
                 onClick={() => setMenuToggle(!menuToggle)}
@@ -80,7 +80,7 @@ const Navbar = () => {
                 />
               </span>
               <span
-                className={`bg-brandColor01 p-3 rounded-md ${
+                className={`bg-brandColor01 p-2.5 rounded-md ${
                   menuToggle ? "" : "hidden"
                 }`}
                 onClick={() => setMenuToggle(!menuToggle)}

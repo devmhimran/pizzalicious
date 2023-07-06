@@ -42,8 +42,8 @@ const Page = () => {
   console.log(errors);
 
   return (
-    <div className="relative h-full mb-0 lg:mb-10 bg-white">
-      <div className="border rounded-md p-6">
+    <div className="relative h-full mb-0 lg:mb-10">
+      <div className="border rounded-md p-6 bg-white">
         <form onSubmit={handleSubmit}>
           <h3 className="text-lg font-semibold mb-6">Reset your password</h3>
 

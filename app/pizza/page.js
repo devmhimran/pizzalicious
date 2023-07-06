@@ -4,7 +4,8 @@ import SinglePizzaSkeleton from "@/components/SinglePizzaSkeleton/SinglePizzaSke
 const Page = () => {
   return (
     <div>
-      <PizzaGridSkeleton />
+      {/* <PizzaGridSkeleton /> */}
+      <SinglePizzaSkeleton />
     </div>
   );
 };

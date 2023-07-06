@@ -32,7 +32,7 @@ const Page = () => {
           <button className="text-gray-400 font-semibold">Remove</button>
         </div>
 
-        <div className="flex gap-5 mt-5">
+        <div className="flex gap-5 mt-5 mb-3">
           <div className="w-full">
             <PrimaryInput
               type="text"
@@ -49,7 +49,7 @@ const Page = () => {
             inputId="lastName"
           />
         </div>
-        <div className="block lg:flex gap-5">
+        <div className="block lg:flex gap-5 my-3">
           <PrimaryInput
             type="email"
             name="email"

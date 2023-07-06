@@ -6,14 +6,14 @@ const PizzaGridSkeleton = () => {
         .map((_, index) => (
           <div
             key={index}
-            className="border rounded-md cursor-pointer bg-white"
+            className="border rounded-md cursor-pointer bg-white animate-pulse"
           >
-            <div className="w-full h-[330px] bg-gray-300 mb-2 rounded-t-md"></div>
+            <div className="w-full h-[150px] lg:h-[330px] bg-gray-300 mb-2 rounded-t-md"></div>
             <div className="pizza__detail p-4">
-              <div className="w-5/12 h-6 bg-gray-300 mb-3 rounded-md"></div>
+              <div className="w-6/12 h-5 bg-gray-300 mb-3 rounded-md"></div>
               <div className="flex items-center gap-1.5 my-1">
-                <div className="w-[15%] h-5 bg-gray-300 rounded-md"></div>
-                <div className="w-[15%] h-5 bg-gray-300 rounded-md"></div>
+                <div className="w-[28%] h-4 bg-gray-300 rounded-md"></div>
+                <div className="w-[28%] h-4 bg-gray-300 rounded-md"></div>
               </div>
             </div>
           </div>

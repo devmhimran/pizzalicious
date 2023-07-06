@@ -1,5 +1,4 @@
 "use client";
-
 import Footer from "@/components/Footer/Footer";
 import PreLoader from "@/components/PreLoader/PreLoader";
 import PrimaryInput from "@/components/PrimaryInput/PrimaryInput";
@@ -9,6 +8,8 @@ import { useEffect, useState } from "react";
 
 const Page = ({ params }) => {
   const [smallPrice, setSmallPrice] = useState(null);
+  const [sizes, setSizes] = useState("Small");
+  const [price, setPrice] = useState("");
   const getPizzaData = () =>
     fetch(
       `https://api-creator-server.vercel.app/pizzalicious/pizzalicious/${params.id}`
@@ -16,15 +17,30 @@ const Page = ({ params }) => {
       .then((res) => res.json())
       .then((data) => data);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data: pizzaData, isLoading } = useQuery({
     queryKey: ["pizzas-single-data"],
     queryFn: getPizzaData,
   });
 
+  useEffect(() => {
+    const findSmallPrice = () => {
+      if (pizzaData) {
+        for (const size of pizzaData?.sizes) {
+          if (size.name === sizes) {
+            setPrice(size.price);
+            break;
+          }
+        }
+      }
+    };
+    findSmallPrice();
+  }, [sizes, pizzaData]);
+
   if (isLoading) {
     return <SinglePizzaSkeleton />;
   }
+
+  console.log(sizes);
 
   return (
     <div>
@@ -55,8 +71,13 @@ const Page = ({ params }) => {
                 {pizzaData?.sizes.map((size) => (
                   <>
                     <button
-                      className="py-1.5 px-2 bg-[#fff3f3] text-xs lg:text-sm border border-brandColor01 
-                    text-brandColor01 rounded-md font-normal mx-1  hover:bg-brandColor01 hover:text-white"
+                      className={`py-1.5 px-2  text-[11px] border border-brandColor01 rounded-md 
+                      font-normal mx-1  hover:bg-brandColor01 hover:text-white ${
+                        sizes === size.name
+                          ? "bg-brandColor01 text-white"
+                          : "bg-[#fff3f3] text-brandColor01"
+                      }`}
+                      onClick={() => setSizes(size.name)}
                     >
                       {size.name}
                     </button>
@@ -66,7 +87,7 @@ const Page = ({ params }) => {
               <div className="price my-5">
                 <p className="font-semibold">
                   Price: <span className="text-2xl"> $ </span>
-                  <span className="text-5xl font-bold">30</span>
+                  <span className="text-5xl font-bold">{price}</span>
                 </p>
               </div>
             </div>

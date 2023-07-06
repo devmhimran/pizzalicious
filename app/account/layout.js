@@ -33,7 +33,7 @@ const layout = ({ children }) => {
       icon: BsShield,
     },
   ];
-  //   const router = useRouter();
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
   return (
