@@ -58,7 +58,15 @@ const Navbar = () => {
               <LuShoppingBag className="text-xl text-brandColor01" />
             </span>
           </div>
-
+          <Link href="/account">
+            <div className="avatar">
+              <img
+                className="w-10 h-10 rounded-md "
+                src="/assets/pizzalicious-avatar-image.png"
+                alt=""
+              />
+            </div>
+          </Link>
           <div className="mobile__menu block lg:hidden">
             <div className="flex gap-3 items-center">
               <span
@@ -81,7 +89,7 @@ const Navbar = () => {
               </span>
             </div>
             <div
-              className={`menu__content absolute w-40 top-14 right-0 bg-brandColor01 z-10 rounded-md p-4  ${
+              className={`menu__content absolute w-44 top-14 right-0 bg-brandColor01 z-10 rounded-md p-4  ${
                 menuToggle ? "" : "hidden"
               }`}
             >
