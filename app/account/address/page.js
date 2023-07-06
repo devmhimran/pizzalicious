@@ -68,7 +68,7 @@ const Page = () => {
   return (
     <div className="relative h-full">
       <h2 className="text-xl font-semibold">Additional Information</h2>
-      <div className="border rounded-2xl p-6 mt-5">
+      <div className="border rounded-md p-6 mt-5 bg-white">
         <div className="block lg:flex gap-5 mt-4">
           <form className="w-full" onSubmit={billingAddressFormik.handleSubmit}>
             <h3 className="text-lg font-semibold mb-6">Billing Address</h3>

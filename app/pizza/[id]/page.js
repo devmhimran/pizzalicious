@@ -31,28 +31,28 @@ const Page = ({ params }) => {
         <div className="pizza__img">
           <img className="w-full rounded-lg" src={pizzaData?.image} alt="" />
         </div>
-        <div className="pizza__detail border rounded p-8 bg-white">
+        <div className="pizza__detail border rounded-md p-8 bg-white">
           <h1 className="text-4xl font-bold mb-8">{pizzaData?.name}</h1>
           <p className="text-lg text-brandColor04 font-normal">
             {pizzaData?.description}
           </p>
           <p className="text-2xl font-bold my-6">Ingredients</p>
-          <ol>
+          <ul>
             {pizzaData?.ingredients.map((data, index) => (
               <li
-                className="list-disc text-lg text-brandColor04 font-normal"
+                className="text-lg my-1.5 text-brandColor04 font-normal"
                 key={index}
               >
-                {data}
+                - {data}
               </li>
             ))}
-          </ol>
-          <div className="prices my-5">
+          </ul>
+          <div className="prices my-6">
             <div className="sizes flex items-center">
               <p className="font-semibold">Sizes: </p>
               {pizzaData?.sizes.map((size) => (
                 <>
-                  <button className="py-1.5 px-2 bg-[#fff3f3] border border-brandColor01 text-brandColor01 rounded font-normal mx-1  hover:bg-brandColor01 hover:text-white">
+                  <button className="py-1.5 px-2 bg-[#fff3f3] text-sm border border-brandColor01 text-brandColor01 rounded-md font-normal mx-1  hover:bg-brandColor01 hover:text-white">
                     {size.name}
                   </button>
                 </>
@@ -70,7 +70,7 @@ const Page = ({ params }) => {
               <PrimaryInput type="number" defaultValue="1" />
             </div>
             <div className="cart__btn">
-              <button className="bg-brandColor01 px-5 py-3 rounded text-white font-normal">
+              <button className="bg-brandColor01 px-5 py-3 rounded-md text-white font-normal">
                 Add to cart
               </button>
             </div>

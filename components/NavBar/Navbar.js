@@ -36,9 +36,9 @@ const Navbar = () => {
             </Link>
           </div>
           {/* <div className="lg:block hidden">
-            <div className="search bg-[#EDEEF2] rounded-xl flex justify-end items-center px-2.5">
+            <div className="search bg-[#EDEEF2] rounded-md flex justify-end items-center px-2.5">
               <input
-                className="bg-[#EDEEF2] w-full py-2 outline-none rounded-xl"
+                className="bg-[#EDEEF2] w-full py-2 outline-none rounded-md"
                 placeholder="Search"
                 type="text"
                 name=""
@@ -63,7 +63,7 @@ const Navbar = () => {
             |
           </span>
 
-          <div className="cart bg-[#fff3f3] p-3 rounded-xl relative">
+          <div className="cart bg-[#fff3f3] p-3 rounded-md relative">
             <p className="bg-brandColor01 text-xs py-0.5 px-1.5 text-white rounded-full absolute top-[-5px] right-[-5px]">
               4
             </p>
@@ -73,7 +73,7 @@ const Navbar = () => {
           </div>
           <div className="avatar">
             {/* <Image
-            className="rounded-xl focus:outline outline-offset-2 outline-1 outline-blue-500"
+            className="rounded-md focus:outline outline-offset-2 outline-1 outline-blue-500"
             width={40}
             height={40}
             src="/assets/pizzalicious-avatar-image.png"
@@ -84,13 +84,13 @@ const Navbar = () => {
               onClick={() => setProfileDropDown(!profileDropDown)}
             >
               <img
-                className="w-10 h-10 rounded-xl "
+                className="w-10 h-10 rounded-md "
                 src="/assets/pizzalicious-avatar-image.png"
                 alt=""
               />
             </span>
             <div
-              className={`absolute w-40 right-20  lg:right-0 bg-brandColor01 z-10 rounded-xl p-4 ${
+              className={`absolute w-40 right-20  lg:right-0 bg-brandColor01 z-10 rounded-md p-4 ${
                 profileDropDown ? "" : "hidden"
               }`}
             >
@@ -134,7 +134,7 @@ const Navbar = () => {
             <div className="flex gap-2 items-center">
               <span>|</span>
               <span
-                className={`bg-[#EDEEF2] p-3 rounded-xl ${
+                className={`bg-[#EDEEF2] p-3 rounded-md ${
                   menuToggle ? "hidden" : ""
                 }`}
                 onClick={() => setMenuToggle(!menuToggle)}
@@ -146,7 +146,7 @@ const Navbar = () => {
                 />
               </span>
               <span
-                className={`bg-[#EDEEF2] p-3 rounded-xl ${
+                className={`bg-[#EDEEF2] p-3 rounded-md ${
                   menuToggle ? "" : "hidden"
                 }`}
                 onClick={() => setMenuToggle(!menuToggle)}
@@ -155,7 +155,7 @@ const Navbar = () => {
               </span>
             </div>
             <div
-              className={`menu__content  absolute w-full left-0 bg-brandColor01 z-10 rounded-xl p-4 ${
+              className={`menu__content  absolute w-full left-0 bg-brandColor01 z-10 rounded-md p-4 ${
                 menuToggle ? "" : "hidden"
               }`}
             >

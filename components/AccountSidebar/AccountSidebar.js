@@ -44,7 +44,7 @@ const AccountSidebar = ({ pathname }) => {
             <Link key={index} href={data.navLink}>
               <div
                 className={`flex items-center gap-3.5 mt-5 p-4 cursor-pointer
-                border border-1 rounded-xl my-2 ${
+                border border-1 rounded-md my-2 ${
                   pathname === data.navLink
                     ? styles.dashboard__active__nav +
                       " border-brandColor01 bg-[#fff3f3]"
@@ -52,7 +52,7 @@ const AccountSidebar = ({ pathname }) => {
                 } ${styles.dashboard__nav}`}
               >
                 <span
-                  className={`bg-[#EDEEF2] p-2 rounded-xl ${styles.dashboard__nav__container}`}
+                  className={`bg-[#EDEEF2] p-2 rounded-md ${styles.dashboard__nav__container}`}
                 >
                   <data.icon
                     className={`text-3xl text-[#83859C] ${styles.dashboard__nav__icon}`}

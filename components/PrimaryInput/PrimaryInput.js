@@ -17,7 +17,7 @@ const PrimaryInput = ({
       </label>
       <input
         className={
-          `border rounded p-3 w-full outline-none focus:border-brandColor01 mt-1` +
+          `border rounded-md p-3 w-full outline-none focus:border-brandColor01 mt-1` +
           className
         }
         id={inputId}

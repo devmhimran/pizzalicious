@@ -5,14 +5,14 @@ const SinglePizzaSkeleton = () => {
         <div className="pizza__img">
           <div className="w-full h-[450px] rounded-lg bg-gray-300"></div>
         </div>
-        <div className="pizza__detail border rounded p-8 bg-white">
-          <div className="w-full h-9 bg-gray-300 mb-6 rounded-2xl"></div>
-          <div className="w-full h-6 bg-gray-300 mb-2 rounded-2xl"></div>
-          <div className="w-7/12 h-6 bg-gray-300 mb-10 rounded-2xl"></div>
-          <div className="w-5/12 h-7 bg-gray-300 mb-4 rounded-2xl "></div>
-          <div className="w-7/12 h-5 bg-gray-300 mb-2 rounded-2xl"></div>
-          <div className="w-7/12 h-5 bg-gray-300 mb-2 rounded-2xl"></div>
-          <div className="w-7/12 h-5 bg-gray-300 mb-2 rounded-2xl"></div>
+        <div className="pizza__detail border rounded-md p-8 bg-white">
+          <div className="w-full h-9 bg-gray-300 mb-6 rounded-md"></div>
+          <div className="w-full h-6 bg-gray-300 mb-2 rounded-md"></div>
+          <div className="w-7/12 h-6 bg-gray-300 mb-10 rounded-md"></div>
+          <div className="w-5/12 h-7 bg-gray-300 mb-4 rounded-md "></div>
+          <div className="w-7/12 h-5 bg-gray-300 mb-2 rounded-md"></div>
+          <div className="w-7/12 h-5 bg-gray-300 mb-2 rounded-md"></div>
+          <div className="w-7/12 h-5 bg-gray-300 mb-2 rounded-md"></div>
           <div className="flex items-center gap-3 mt-4">
             <div className="w-2/12 h-9 bg-gray-300 mb-2 rounded-lg"></div>
             <div className="w-2/12 h-9 bg-gray-300 mb-2 rounded-lg"></div>

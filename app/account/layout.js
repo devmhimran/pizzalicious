@@ -8,13 +8,13 @@ const layout = ({ children }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
   return (
-    <div
-      className={`container mx-auto min-h-screen lg:grid grid-cols-3 lg:grid-cols-3 py-16 gap-16 px-4`}
-    >
-      <div className="hidden lg:block">
-        <AccountSidebar pathname={pathname} />
+    <div className="bg-brand__bg__color">
+      <div className="container mx-auto min-h-screen lg:grid grid-cols-3 lg:grid-cols-3 py-16 gap-16 px-4 ">
+        <div className="hidden lg:block">
+          <AccountSidebar pathname={pathname} />
+        </div>
+        <div className="col-span-2 w-full">{children}</div>
       </div>
-      <div className="col-span-2 w-full">{children}</div>
     </div>
   );
 };

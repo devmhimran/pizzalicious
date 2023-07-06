@@ -24,7 +24,7 @@ const PizzaCard = ({ data }) => {
   return (
     <div
       onClick={() => router.push(`/pizza/${_id}`)}
-      className="text-black border rounded cursor-pointer bg-white"
+      className="text-black border rounded-md cursor-pointer bg-white"
     >
       <img className="rounded-t" src={image} alt={name} />
       <div className="pizza__detail p-4">

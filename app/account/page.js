@@ -16,17 +16,17 @@ const Page = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <h2 className="text-xl font-semibold">Account</h2>
-      <div className="border rounded p-6 mt-5">
+      <div className="border rounded-md p-6 mt-5 bg-white">
         <h3 className="text-lg font-semibold mb-6">Personal information</h3>
         <div className="flex items-center gap-4">
           <img
-            className="w-20 h-20 object-cover rounded-xl"
+            className="w-20 h-20 object-cover rounded-md"
             src="/assets/pizzalicious-hero-avatar-image.png"
             alt=""
           />
-          <button className="border border-brandColor01 px-4 py-2 rounded text-brandColor01 font-semibold">
+          <button className="border border-brandColor01 px-4 py-2 rounded-md text-brandColor01 font-semibold">
             Change
           </button>
           <button className="text-gray-400 font-semibold">Remove</button>
@@ -66,7 +66,7 @@ const Page = () => {
           />
         </div>
         <div className=" mt-10">
-          <button className=" bg-brandColor01 px-5 py-3 rounded-xl text-white font-semibold block ml-auto">
+          <button className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block ml-auto">
             Save Changes
           </button>
         </div>

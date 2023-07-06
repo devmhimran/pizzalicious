@@ -44,7 +44,7 @@ const Page = () => {
   return (
     <div className="relative h-full mb-0 lg:mb-10">
       <h2 className="text-xl font-semibold">Security</h2>
-      <div className="border rounded-2xl p-6 mt-5">
+      <div className="border rounded-md p-6 mt-5">
         <form onSubmit={handleSubmit}>
           <h3 className="text-lg font-semibold mb-6">Reset your password</h3>
 
@@ -98,7 +98,7 @@ const Page = () => {
           <div className=" mt-10">
             <input
               type="submit"
-              className=" bg-brandColor01 px-5 py-3 rounded-xl text-white font-semibold block ml-auto"
+              className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block ml-auto"
               value="Save Changes"
             />
           </div>
