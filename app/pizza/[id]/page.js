@@ -71,7 +71,7 @@ const Page = ({ params }) => {
                 {pizzaData?.sizes.map((size) => (
                   <>
                     <button
-                      className={`py-1.5 px-2  text-[11px] border border-brandColor01 rounded-md 
+                      className={`py-1.5 px-2  text-[11px] lg:text-sm border border-brandColor01 rounded-md 
                       font-normal mx-1  hover:bg-brandColor01 hover:text-white ${
                         sizes === size.name
                           ? "bg-brandColor01 text-white"

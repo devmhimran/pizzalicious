@@ -1,13 +1,41 @@
+"use client";
 import PrimaryInput from "@/components/PrimaryInput/PrimaryInput";
+import { useFormik } from "formik";
 import Head from "next/head";
+import * as Yup from "yup";
+
+const profileUpdateSchema = Yup.object({
+  firstName: Yup.string().max(20).required("Please enter your first name"),
+  lastName: Yup.string().max(20).required("Please enter last name"),
+  phone: Yup.string().required("please enter your phone number"),
+  email: Yup.string().required("please enter your email"),
+});
 
 const Page = () => {
-  const handleSubmit = (e) => {
-    console.log(e);
+  // const handleSubmit = (e) => {
+  //   console.log(e);
+  // };
+  // const handleChange = (e) => {
+  //   console.log(e.target);
+  // };
+
+  const profileValues = {
+    firstName: "John",
+    lastName: "Doe",
+    email: "example@domain.com",
+    phone: "+8801534871992",
   };
-  const handleChange = (e) => {
-    console.log(e.target);
-  };
+
+  const profileUpdateFormik = useFormik({
+    initialValues: profileValues,
+    validationSchema: profileUpdateSchema,
+    onSubmit: (values) => {
+      if (values) {
+        console.log(values);
+        toast.success("Successfully change billing address");
+      }
+    },
+  });
 
   return (
     <div className="relative ">
@@ -31,33 +59,66 @@ const Page = () => {
             <PrimaryInput
               type="text"
               name="firstName"
+              value={profileUpdateFormik.values.firstName}
+              onBlur={profileUpdateFormik.handleBlur}
+              onChange={profileUpdateFormik.handleChange}
               label="First Name"
               inputId="firstName"
-              onBlur={handleChange}
             />
+            {profileUpdateFormik.errors.firstName &&
+            profileUpdateFormik.touched.firstName ? (
+              <small className="text-red-500">
+                {profileUpdateFormik.errors.firstName}
+              </small>
+            ) : null}
           </div>
           <PrimaryInput
             type="text"
             name="lastName"
+            value={profileUpdateFormik.values.lastName}
+            onBlur={profileUpdateFormik.handleBlur}
+            onChange={profileUpdateFormik.handleChange}
             label="Last Name"
             inputId="lastName"
           />
+          {profileUpdateFormik.errors.lastName &&
+          profileUpdateFormik.touched.lastName ? (
+            <small className="text-red-500">
+              {profileUpdateFormik.errors.lastName}
+            </small>
+          ) : null}
         </div>
         <div className="block lg:flex gap-5 my-3">
           <PrimaryInput
             type="email"
             name="email"
+            value={profileUpdateFormik.values.email}
+            onBlur={profileUpdateFormik.handleBlur}
+            onChange={profileUpdateFormik.handleChange}
             label="Email"
             inputId="email"
-            onBlur={handleChange}
           />
+          {profileUpdateFormik.errors.email &&
+          profileUpdateFormik.touched.email ? (
+            <small className="text-red-500">
+              {profileUpdateFormik.errors.email}
+            </small>
+          ) : null}
           <PrimaryInput
             type="phone"
             name="phone"
+            value={profileUpdateFormik.values.phone}
+            onBlur={profileUpdateFormik.handleBlur}
+            onChange={profileUpdateFormik.handleChange}
             label="Phone"
             inputId="phone"
-            onBlur={handleChange}
           />
+          {profileUpdateFormik.errors.phone &&
+          profileUpdateFormik.touched.phone ? (
+            <small className="text-red-500">
+              {profileUpdateFormik.errors.phone}
+            </small>
+          ) : null}
         </div>
         <div className=" mt-10">
           <button className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block ml-auto">
