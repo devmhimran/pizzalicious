@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./AccountSidebar.module.css";
 import Link from "next/link";
 
