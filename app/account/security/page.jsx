@@ -93,10 +93,10 @@ const Page = () => {
             </div>
           </div>
 
-          <div className=" mt-10">
+          <div className=" mt-5">
             <input
               type="submit"
-              className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block ml-auto"
+              className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block mr-auto"
               value="Save Changes"
             />
           </div>

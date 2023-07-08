@@ -1,6 +1,5 @@
 "use client";
-import Footer from "@/components/Footer/Footer";
-import PreLoader from "@/components/PreLoader/PreLoader";
+
 import PrimaryInput from "@/components/PrimaryInput/PrimaryInput";
 import SinglePizzaSkeleton from "@/components/SinglePizzaSkeleton/SinglePizzaSkeleton";
 import { useQuery } from "@tanstack/react-query";
@@ -104,7 +103,6 @@ const Page = ({ params }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

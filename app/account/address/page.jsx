@@ -5,6 +5,11 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 
+export const metadata = {
+  title: "Address - Pizzalicious",
+  description: "...",
+};
+
 const billingAddressValidationSchema = Yup.object({
   firstName: Yup.string().max(20).required("Please enter your first name"),
   lastName: Yup.string().max(20).required("Please enter last name"),
@@ -217,7 +222,7 @@ const Page = () => {
               </div>
               <div className="my-3">
                 <input
-                  className="border rounded-lg p-3 bg-brandColor01 text-white cursor-pointer block ml-auto"
+                  className="border rounded-lg p-3 bg-brandColor01 text-white cursor-pointer block mr-auto"
                   type="submit"
                   value="Save Changes"
                 />
@@ -296,45 +301,42 @@ const Page = () => {
                   </small>
                 ) : null}
               </div>
-              <div className="flex gap-3">
-                <div className="my-3">
-                  <PrimaryInput
-                    type="text"
-                    name="city"
-                    value={shippingAddressFormik.values.city}
-                    onBlur={shippingAddressFormik.handleBlur}
-                    onChange={shippingAddressFormik.handleChange}
-                    label="Town/City"
-                    inputId="city"
-                  />
-                  {shippingAddressFormik.errors.city &&
-                  shippingAddressFormik.touched.city ? (
-                    <small className="text-red-500">
-                      {shippingAddressFormik.errors.city}
-                    </small>
-                  ) : null}
-                </div>
-                <div className="my-3">
-                  <PrimaryInput
-                    type="text"
-                    name="postalCode"
-                    value={shippingAddressFormik.values.postalCode}
-                    onBlur={shippingAddressFormik.handleBlur}
-                    onChange={shippingAddressFormik.handleChange}
-                    label="Postal Code"
-                    inputId="postalCode"
-                  />
-                  {shippingAddressFormik.errors.postalCode &&
-                  shippingAddressFormik.touched.postalCode ? (
-                    <small className="text-red-500">
-                      {shippingAddressFormik.errors.postalCode}
-                    </small>
-                  ) : null}
-                </div>
+              <div className="flex gap-3 items-center my-3">
+                <PrimaryInput
+                  type="text"
+                  name="city"
+                  value={shippingAddressFormik.values.city}
+                  onBlur={shippingAddressFormik.handleBlur}
+                  onChange={shippingAddressFormik.handleChange}
+                  label="Town/City"
+                  inputId="city"
+                />
+                {shippingAddressFormik.errors.city &&
+                shippingAddressFormik.touched.city ? (
+                  <small className="text-red-500">
+                    {shippingAddressFormik.errors.city}
+                  </small>
+                ) : null}
+
+                <PrimaryInput
+                  type="text"
+                  name="postalCode"
+                  value={shippingAddressFormik.values.postalCode}
+                  onBlur={shippingAddressFormik.handleBlur}
+                  onChange={shippingAddressFormik.handleChange}
+                  label="Postal Code"
+                  inputId="postalCode"
+                />
+                {shippingAddressFormik.errors.postalCode &&
+                shippingAddressFormik.touched.postalCode ? (
+                  <small className="text-red-500">
+                    {shippingAddressFormik.errors.postalCode}
+                  </small>
+                ) : null}
               </div>
-              <div className="my-3">
+              <div className="mt-5 mb-3">
                 <input
-                  className="border rounded-lg p-3 bg-brandColor01 text-white cursor-pointer block ml-auto"
+                  className="border rounded-lg p-3 bg-brandColor01 text-white cursor-pointer block mr-auto"
                   type="submit"
                   value="Save Changes"
                 />

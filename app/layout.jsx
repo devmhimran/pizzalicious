@@ -4,7 +4,6 @@ import "./globals.css";
 import { fonts } from "@/utlis/fonts/font";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
-import Footer from "@/components/Footer/Footer";
 
 const queryClient = new QueryClient();
 

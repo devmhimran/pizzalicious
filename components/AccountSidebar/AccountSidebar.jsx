@@ -5,7 +5,7 @@ const AccountSidebar = ({ pathname, dashboardNavLink }) => {
   const nonActiveNav = "hover:bg-[#fff3f3] hover:border-brandColor01";
 
   return (
-    <div className={`h-2/5 bg-white rounded-md border p-5`}>
+    <div className={`h-[460px] bg-white rounded-md border p-5`}>
       <div>
         {dashboardNavLink.map((data, index) => (
           <>

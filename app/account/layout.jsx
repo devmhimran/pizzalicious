@@ -6,6 +6,11 @@ import { PiMapPinLight } from "react-icons/pi";
 import { BsShield } from "react-icons/bs";
 import AccountMobileSidebar from "@/components/AccountMobileSidebar/AccountMobileSidebar";
 
+export const metadata = {
+  title: "Account - Pizzalicious",
+  description: "...",
+};
+
 const layout = ({ children }) => {
   const dashboardNavLink = [
     {

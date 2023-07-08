@@ -6,6 +6,11 @@ import PizzaShowcase from "@/components/PizzaShowcase/PizzaShowcase";
 import Head from "next/head";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Home - Pizzalicious",
+  description: "...",
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-brand__bg__color">

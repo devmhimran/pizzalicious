@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <div>
       {/* <PizzaGridSkeleton /> */}
-      <SinglePizzaSkeleton />
+      {/* <SinglePizzaSkeleton /> */}
     </div>
   );
 };

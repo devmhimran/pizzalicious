@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsClock } from "react-icons/bs";
 
 const PizzaCard = ({ data }) => {
