@@ -39,53 +39,37 @@ const Page = () => {
     },
   });
 
-  console.log(errors);
-
   return (
     <div className="relative h-full mb-0 lg:mb-10">
+      <title>Security - Pizzalicious</title>
       <div className="border rounded-md p-6 bg-white">
         <form onSubmit={handleSubmit}>
           <h3 className="text-lg font-semibold mb-6">Reset your password</h3>
 
           <div className="mt-4">
-            <div className="w-full py-2 lg:my-0">
-              {/* <input
-                className="border rounded-lg p-3 w-full outline-none focus:border-brandColor01 my-2 lg:my-0"
-                type="password"
-                name="newPassword"
-                value={values.newPassword}
-                onBlur={handleBlur}
-                onChange={handleChange}
-                placeholder="New Password"
-              /> */}
+            <div className="w-full my-2 lg:my-3">
               <PrimaryInput
                 type="password"
                 name="newPassword"
                 label="New Password"
                 inputId="newPassword"
-                onBlur={handleChange}
+                value={values.newPassword}
+                onBlur={handleBlur}
+                onChange={handleChange}
               />
               {errors.newPassword && touched.newPassword ? (
                 <small className="text-red-500">{errors.newPassword}</small>
               ) : null}
             </div>
-            <div className="w-full py-2 lg:my-0">
-              {/* <input
-                className="border rounded-lg p-3 w-full outline-none focus:border-brandColor01 my-2 lg:my-0"
-                type="password"
-                name="confirmPassword"
-                value={values.confirmPassword}
-                onBlur={handleBlur}
-                onChange={handleChange}
-                placeholder="Confirm New Password"
-              /> */}
+            <div className="w-full my-2 lg:my-3">
               <PrimaryInput
                 type="password"
                 name="confirmPassword"
-                value={values.confirmPassword}
                 label="Confirm Password"
                 inputId="confirmPassword"
-                onBlur={handleChange}
+                value={values.confirmPassword}
+                onBlur={handleBlur}
+                onChange={handleChange}
               />
               {errors.confirmPassword && touched.confirmPassword ? (
                 <small className="text-red-500">{errors.confirmPassword}</small>
@@ -93,11 +77,11 @@ const Page = () => {
             </div>
           </div>
 
-          <div className=" mt-5">
+          <div className="py-2 lg:py-3">
             <input
               type="submit"
               className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block mr-auto"
-              value="Save Changes"
+              defaultValue="Save Changes"
             />
           </div>
         </form>

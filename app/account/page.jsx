@@ -5,16 +5,11 @@ import Head from "next/head";
 import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 
-export const metadata = {
-  title: "Account - Pizzalicious",
-  description: "...",
-};
-
 const profileUpdateSchema = Yup.object({
   firstName: Yup.string().max(20).required("Please enter your first name"),
   lastName: Yup.string().max(20).required("Please enter last name"),
-  phone: Yup.string().required("please enter your phone number"),
-  email: Yup.string().required("please enter your email"),
+  phone: Yup.string().required("Please enter your phone number"),
+  email: Yup.string().required("Please enter your email"),
 });
 
 const Page = () => {
@@ -44,7 +39,9 @@ const Page = () => {
   });
 
   return (
-    <div className="relative ">
+    <div className="relative">
+      <title>Account - Pizzalicious</title>
+
       {/* <h2 className="text-xl font-semibold">Account</h2> */}
       <div className="border rounded-md p-6 bg-white">
         <h3 className="text-lg font-semibold mb-6">Personal information</h3>
@@ -61,7 +58,7 @@ const Page = () => {
         </div>
 
         <form onSubmit={profileUpdateFormik.handleSubmit}>
-          <div className="flex gap-5 mt-5 mb-3">
+          <div className="flex gap-5 my-2 lg:my-3">
             <div className="w-full">
               <PrimaryInput
                 type="text"
@@ -79,24 +76,27 @@ const Page = () => {
                 </small>
               ) : null}
             </div>
-            <PrimaryInput
-              type="text"
-              name="lastName"
-              value={profileUpdateFormik.values.lastName}
-              onBlur={profileUpdateFormik.handleBlur}
-              onChange={profileUpdateFormik.handleChange}
-              label="Last Name"
-              inputId="lastName"
-            />
-            {profileUpdateFormik.errors.lastName &&
-            profileUpdateFormik.touched.lastName ? (
-              <small className="text-red-500">
-                {profileUpdateFormik.errors.lastName}
-              </small>
-            ) : null}
+            <div className="w-full">
+              <PrimaryInput
+                type="text"
+                name="lastName"
+                value={profileUpdateFormik.values.lastName}
+                onBlur={profileUpdateFormik.handleBlur}
+                onChange={profileUpdateFormik.handleChange}
+                label="Last Name"
+                inputId="lastName"
+              />
+              {profileUpdateFormik.errors.lastName &&
+              profileUpdateFormik.touched.lastName ? (
+                <small className="text-red-500">
+                  {profileUpdateFormik.errors.lastName}
+                </small>
+              ) : null}
+            </div>
           </div>
-          <div className="block lg:flex gap-5 my-3">
+          <div className="block lg:flex gap-5">
             <PrimaryInput
+              className=" my-2 lg:my-3"
               type="email"
               name="email"
               value={profileUpdateFormik.values.email}
@@ -112,6 +112,7 @@ const Page = () => {
               </small>
             ) : null}
             <PrimaryInput
+              className=" my-2 lg:my-3"
               type="phone"
               name="phone"
               value={profileUpdateFormik.values.phone}
@@ -127,10 +128,12 @@ const Page = () => {
               </small>
             ) : null}
           </div>
-          <div className=" mt-5">
-            <button className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block mr-auto">
-              Save Changes
-            </button>
+          <div className=" mt-2 lg:mt-3">
+            <input
+              type="submit"
+              className=" bg-brandColor01 px-5 py-3 rounded-md text-white font-semibold block mr-auto"
+              defaultValue="Save Changes"
+            />
           </div>
         </form>
       </div>

@@ -8,29 +8,27 @@ const AccountSidebar = ({ pathname, dashboardNavLink }) => {
     <div className={`h-[460px] bg-white rounded-md border p-5`}>
       <div>
         {dashboardNavLink.map((data, index) => (
-          <>
-            <Link key={index} href={data.navLink}>
-              <div
-                className={`flex items-center gap-3.5 cursor-pointer my-3 p-2 rounded-md ${
-                  pathname === data.navLink
-                    ? styles.dashboard__active__nav +
-                      " border-brandColor01 bg-[#fff3f3]"
-                    : nonActiveNav
-                } ${styles.dashboard__nav}`}
+          <Link key={index} href={data.navLink}>
+            <div
+              className={`flex items-center gap-3.5 cursor-pointer my-3 p-2 rounded-md ${
+                pathname === data.navLink
+                  ? styles.dashboard__active__nav +
+                    " border-brandColor01 bg-[#fff3f3]"
+                  : nonActiveNav
+              } ${styles.dashboard__nav}`}
+            >
+              <span
+                className={`bg-[#EDEEF2] p-2 rounded-md ${styles.dashboard__nav__container}`}
               >
-                <span
-                  className={`bg-[#EDEEF2] p-2 rounded-md ${styles.dashboard__nav__container}`}
-                >
-                  <data.icon
-                    className={`text-xl text-[#83859C] ${styles.dashboard__nav__icon}`}
-                  />
-                </span>
-                <div>
-                  <p className="text-lg font-semibold">{data.navText}</p>
-                </div>
+                <data.icon
+                  className={`text-xl text-[#83859C] ${styles.dashboard__nav__icon}`}
+                />
+              </span>
+              <div>
+                <p className="text-lg font-semibold">{data.navText}</p>
               </div>
-            </Link>
-          </>
+            </div>
+          </Link>
         ))}
       </div>
       {/* <div>

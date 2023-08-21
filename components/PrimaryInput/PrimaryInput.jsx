@@ -12,7 +12,7 @@ const PrimaryInput = ({
 }) => {
   return (
     <div className="w-full lg:py-0 py-1">
-      <label className="text-base font-semibold" for={inputId}>
+      <label className="text-base font-semibold" htmlFor={inputId}>
         {label}
       </label>
       <input

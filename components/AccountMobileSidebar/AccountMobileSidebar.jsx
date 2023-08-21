@@ -42,7 +42,9 @@ const AccountMobileSidebar = ({ dashboardNavLink }) => {
                   <Listbox.Option
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                        active ? "bg-amber-100 text-amber-900" : "text-gray-900"
+                        active
+                          ? "bg-[#fff3f3] text-brandColor01"
+                          : "text-gray-900"
                       }`
                     }
                     value={navLink}
@@ -57,7 +59,7 @@ const AccountMobileSidebar = ({ dashboardNavLink }) => {
                           {navLink.navText}
                         </span>
                         {selected ? (
-                          <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                          <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-brandColor01">
                             <HiCheck className="h-5 w-5" aria-hidden="true" />
                           </span>
                         ) : null}

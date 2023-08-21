@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { AiOutlineUser } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import { LuShoppingBag } from "react-icons/lu";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
@@ -113,6 +114,9 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
+          <Link className="bg-[#fff3f3] p-3 rounded-md" href="/sign-in">
+            <AiOutlineUser className="text-xl text-brandColor01" />
+          </Link>
         </div>
       </div>
     </nav>
